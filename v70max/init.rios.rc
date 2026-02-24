@@ -1,0 +1,15 @@
+on early-init
+    # Optimización de CPU para el arranque
+    write /proc/sys/kernel/sched_boost 1
+
+on boot
+    # Nombre del host para la red
+    setprop net.hostname riOS-V70Max
+
+    # Permitir que el sistema gestione la RAM de forma más eficiente
+    write /proc/sys/vm/swappiness 60
+
+
+on property:sys.boot_completed=1
+    # Limitar el log de errores térmicos para no saturar el CPU
+    write /dev/kmsg "riOS: Gestión de energía activada"

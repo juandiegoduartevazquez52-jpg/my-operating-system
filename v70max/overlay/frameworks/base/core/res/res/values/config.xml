@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="config_safe_media_volume_enabled">false</bool>
+
+    <fraction name="config_appTransitionAnimationDurationScaleDefault">50%</fraction>
+
+    <bool name="config_supportsRoundedCornersOnWindows">true</bool>
+</resources>

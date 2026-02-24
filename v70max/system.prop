@@ -1,0 +1,24 @@
+# Optimización de respuesta (Punto B9)
+ro.config.low_ram=false
+ro.sys.fw.bg_apps_limit=20
+dalvik.vm.heapstartsize=8m
+dalvik.vm.heapsize=512m
+dalvik.vm.heaptargetutilization=0.75
+dalvik.vm.heapminfree=512k
+dalvik.vm.heapmaxfree=8m
+
+# Desactivar envío de logs innecesarios para ganar velocidad
+ro.config.nocheckin=1
+profiler.force_disable_err_rpt=1
+profiler.force_disable_ulog=1
+
+# Reducción de ruido en servicios (Punto D9)
+log.tag.statsd=OFF
+log.tag.GCoreFlp=OFF
+log.tag.Icing=OFF
+persist.sys.confidential=true
+
+# Optimización de Package Manager (Punto C8)
+pm.dexopt.first-boot=verify
+pm.dexopt.boot-after-ota=verify
+ro.control_privapp_permissions=enforce
